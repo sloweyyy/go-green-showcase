@@ -89,13 +89,13 @@ export default function TeamSection() {
 		visible: {
 			opacity: 1,
 			transition: {
-				staggerChildren: 0.15,
+				staggerChildren: 0.05, // Even faster staggering for 7 in a row
 			},
 		},
 	};
 
 	const itemVariants = {
-		hidden: { y: 50, opacity: 0 },
+		hidden: { y: 20, opacity: 0 },
 		visible: {
 			y: 0,
 			opacity: 1,
@@ -107,60 +107,66 @@ export default function TeamSection() {
 		},
 	};
 
+	// Group team members into rows of 7
+	const teamRows = [];
+	for (let i = 0; i < teamMembers.length; i += 7) {
+		teamRows.push(teamMembers.slice(i, i + 7));
+	}
+
 	return (
-		<section id="team" className="py-20 bg-green-50/50">
-			<div className="container mx-auto px-4">
+		<section id="team" className="py-16 bg-green-50/50">
+			<div className="container mx-auto px-4 max-w-7xl">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, amount: 0.1 }}
 					transition={{ duration: 0.6 }}
-					className="text-center mb-16"
+					className="text-center mb-12"
 				>
 					<h2 className="text-3xl font-bold text-green-800">Our Team</h2>
-					<p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+					<p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
 						Meet the dedicated members of our Product Support team who are
 						driving the Go Green 2025 campaign.
 					</p>
 				</motion.div>
 
-				<motion.div
-					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-					variants={containerVariants}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true, amount: 0.1 }}
-				>
-					{teamMembers.map((member, index) => (
-						<motion.div
-							key={index}
-							className="bg-white rounded-xl shadow-sm overflow-hidden"
-							variants={itemVariants}
-							whileHover={{ y: -10, transition: { duration: 0.3 } }}
-						>
-							<div className="relative h-64 w-full bg-green-100/50">
-								<Image
-									src={member.image}
-									alt={member.name}
-									fill
-									className="object-cover"
-									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-								/>
-								<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0" />
-								<div className="absolute bottom-0 left-0 p-4 w-full">
-									<div>
-										<h3 className="text-xl font-bold text-white">
-											{member.name}
-										</h3>
-										{member.aka && (
-											<p className="text-green-300">{member.aka}</p>
-										)}
-									</div>
+				{teamRows.map((row, rowIndex) => (
+					<motion.div
+						key={rowIndex}
+						className="grid grid-cols-7 gap-3 mb-3"
+						variants={containerVariants}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.1 }}
+					>
+						{row.map((member, index) => (
+							<motion.div
+								key={index}
+								className="bg-white rounded-md overflow-hidden border border-gray-100"
+								variants={itemVariants}
+								whileHover={{ y: -3, transition: { duration: 0.2 } }}
+							>
+								<div className="relative h-40 w-full bg-green-100/50">
+									<Image
+										src={member.image}
+										alt={member.name}
+										fill
+										className="object-cover"
+										sizes="(max-width: 768px) 14.28vw, 14.28vw"
+									/>
 								</div>
-							</div>
-						</motion.div>
-					))}
-				</motion.div>
+								<div className="p-2 text-center">
+									<h3 className="text-sm font-medium text-gray-800 truncate">
+										{member.name}
+									</h3>
+									{member.aka && (
+										<p className="text-xs text-green-600">{member.aka}</p>
+									)}
+								</div>
+							</motion.div>
+						))}
+					</motion.div>
+				))}
 			</div>
 		</section>
 	);
