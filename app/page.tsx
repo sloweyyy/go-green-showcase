@@ -62,7 +62,7 @@ export default function Home() {
 				},
 				{
 					src: "/day-1/9.webp",
-					caption: "Nature-Backed, Plastic-Free",
+					caption: "Nature-backed, plastic-free vibes",
 				},
 				{
 					src: "/day-1/7.webp",
@@ -71,6 +71,10 @@ export default function Home() {
 				{
 					src: "/day-1/8.webp",
 					caption: "Productivity powered by conscious, waste-free habits",
+				},
+				{
+					src: "/day-1/10.webp",
+					caption: "Green desk energy in full force",
 				},
 				{
 					src: "/day-1/2.webp",
