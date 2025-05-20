@@ -77,6 +77,10 @@ export default function Home() {
 					caption: "Green desk energy in full force",
 				},
 				{
+					src: "/day-1/11.webp",
+					caption: "Work from nature's embrace",
+				},
+				{
 					src: "/day-1/2.webp",
 					caption: "Stylish, reusable containers replacing single-use plastics",
 				},
