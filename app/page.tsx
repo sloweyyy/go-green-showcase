@@ -62,6 +62,14 @@ export default function Home() {
 					src: "/day-1/2.png",
 					caption: "Eco-friendly alternatives in action",
 				},
+				{
+					src: "/day-1/7.png",
+					caption: "Plastic-free workspace setup",
+				},
+				{
+					src: "/day-1/8.png",
+					caption: "Eco-friendly alternatives in action",
+				},
 			],
 		},
 		{
