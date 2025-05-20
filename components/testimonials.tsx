@@ -50,19 +50,19 @@ export default function Testimonials() {
 			name: "Emma Davis",
 			role: "PRODUCT",
 			quote:
-				"The Go Green challenge has completely changed how I think about waste. I've reduced my daily plastic use by 90% and it's become second nature now.",
+				"Joining the Go Green challenge has completely changed how I think about waste. I've reduced my daily plastic use by 90% and it's become second nature now.",
 		},
 		{
 			name: "Mike Chen",
 			role: "TECHNOLOGY",
 			quote:
-				"Participating in the 'Move with Less' day inspired me to start biking to work twice a week. I feel healthier, and it's a great way to start the day!",
+				"Taking part in the 'Move with Less' day inspired me to start biking to work twice a week. I feel healthier, and it's a great way to start the day!",
 		},
 		{
 			name: "Priya Sharma",
 			role: "MARKETING",
 			quote:
-				"The most valuable part of this challenge has been seeing how small changes, when adopted by a whole team, can make a significant environmental impact.",
+				"The most valuable part of participating in this challenge has been seeing how small changes, when adopted by a whole team, can make a significant environmental impact.",
 		},
 		{
 			name: "James Wilson",
@@ -122,8 +122,8 @@ export default function Testimonials() {
 				>
 					<h2 className="text-3xl font-bold text-green-800">Testimonials</h2>
 					<p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-						Hear what our team members have to say about their Go Green 2025
-						experience.
+						Hear what our team members have to say about participating in the Go
+						Green 2025 initiative.
 					</p>
 				</motion.div>
 

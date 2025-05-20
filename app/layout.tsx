@@ -10,6 +10,9 @@ export const metadata: Metadata = {
 	description:
 		"Showcasing our team's participation in the Go Green 2025 campaign",
 	generator: "Slowey",
+	icons: {
+		icon: "/favicon.svg",
+	},
 };
 
 export default function RootLayout({
@@ -19,6 +22,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className="scroll-smooth">
+			<head>
+				<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+			</head>
 			<body className={inter.className}>{children}</body>
 		</html>
 	);

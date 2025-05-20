@@ -126,7 +126,7 @@ export default function TeamSection() {
 					<h2 className="text-3xl font-bold text-green-800">Our Team</h2>
 					<p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
 						Meet the dedicated members of our Product Support team who are
-						driving the Go Green 2025 campaign.
+						participating in the Go Green 2025 campaign.
 					</p>
 				</motion.div>
 

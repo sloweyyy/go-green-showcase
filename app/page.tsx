@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
-// Import custom components
 import { Header } from "@/components/header";
 import StandardGrid from "@/components/galleries/standard-grid";
 import MasonryLayout from "@/components/galleries/masonry-layout";
@@ -135,8 +134,8 @@ export default function Home() {
 							Go Green 2025
 						</h1>
 						<p className="mt-6 text-xl text-gray-600 sm:text-2xl">
-							Join the Product Support team as we participate in the
-							company-wide sustainability initiative
+							The Product Support team is proud to participate in the
+							company-wide Go Green initiative for a sustainable future
 						</p>
 					</motion.div>
 
@@ -147,9 +146,8 @@ export default function Home() {
 						className="mt-12"
 					>
 						<p className="text-lg text-gray-600">
-							Our team is committed to making a difference through three key
-							challenges: reducing plastic use, sustainable transportation, and
-							zero-waste lunches.
+							We're excited to take part in the three key challenges: reducing
+							plastic use, sustainable transportation, and zero-waste lunches.
 						</p>
 						<p className="mt-4 text-lg text-gray-600">
 							Scroll down to see our journey through photos!

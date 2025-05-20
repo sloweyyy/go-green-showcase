@@ -81,8 +81,9 @@ export default function ImpactStats() {
 				>
 					<h2 className="text-3xl font-bold text-green-800">Our Impact</h2>
 					<p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-						Together, our small actions are making a big difference. Here's how
-						our team is contributing to a greener future.
+						Together, our small actions as part of the Go Green initiative are
+						making a difference. Here's how our team's participation is
+						contributing to a greener future.
 					</p>
 				</motion.div>
 

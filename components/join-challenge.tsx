@@ -87,9 +87,10 @@ export default function JoinChallenge() {
 								Product Support Feedback
 							</h2>
 							<p className="text-lg text-gray-600 mb-8">
-								Share your thoughts with our product support team about the Go
-								Green 2025 initiative. Your feedback helps us improve and better
-								serve our team members.
+								Share your thoughts with our product support team about our
+								participation in the Go Green 2025 initiative. Your feedback
+								helps us improve our involvement and better connect with other
+								teams.
 							</p>
 
 							<div className="space-y-4">
@@ -147,8 +148,9 @@ export default function JoinChallenge() {
 										Thank you for your feedback!
 									</h3>
 									<p className="text-gray-600 mb-6">
-										We appreciate your contribution to the Go Green 2025
-										campaign. The product support team will review your comment.
+										We appreciate your contribution to our team's participation
+										in the Go Green 2025 campaign. The product support team will
+										review your comment.
 									</p>
 									<button
 										onClick={() => setIsSubmitted(false)}
