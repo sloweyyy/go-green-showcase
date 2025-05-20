@@ -61,8 +61,8 @@ export default function Home() {
 					caption: "Kicking off with sustainable alternatives and a smile",
 				},
 				{
-					src: "/day-1/2.webp",
-					caption: "Stylish, reusable containers replacing single-use plastics",
+					src: "/day-1/9.webp",
+					caption: "Nature-Backed, Plastic-Free",
 				},
 				{
 					src: "/day-1/7.webp",
@@ -71,6 +71,10 @@ export default function Home() {
 				{
 					src: "/day-1/8.webp",
 					caption: "Productivity powered by conscious, waste-free habits",
+				},
+				{
+					src: "/day-1/2.webp",
+					caption: "Stylish, reusable containers replacing single-use plastics",
 				},
 			],
 		},
