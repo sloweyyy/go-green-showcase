@@ -47,11 +47,19 @@ export default function Home() {
 					caption: "Team meeting with zero plastic",
 				},
 				{
-					src: "/day-1/2.png",
+					src: "/day-1/3.png",
 					caption: "Plastic-free workspace setup",
 				},
 				{
-					src: "/day-1/3.png",
+					src: "/day-1/5.png",
+					caption: "Eco-friendly alternatives in action",
+				},
+				{
+					src: "/day-1/6.png",
+					caption: "Eco-friendly alternatives in action",
+				},
+				{
+					src: "/day-1/2.png",
 					caption: "Eco-friendly alternatives in action",
 				},
 			],
