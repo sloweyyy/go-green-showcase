@@ -39,36 +39,38 @@ export default function Home() {
 			title: "Less Plastic",
 			images: [
 				{
-					src: "/day-1/1.png",
-					caption: "Team members using reusable bottles",
+					src: "/day-1/1.webp",
+					caption:
+						"Product Support team shows off reusable bottles together on Day 1 🌱",
 				},
 				{
-					src: "/day-1/4.png",
-					caption: "Team meeting with zero plastic",
+					src: "/day-1/4.webp",
+					caption: "Zero-plastic setup with digital tools and sustainable sips",
 				},
 				{
-					src: "/day-1/3.png",
-					caption: "Plastic-free workspace setup",
+					src: "/day-1/3.webp",
+					caption: "Tackling work with green habits at the desk",
 				},
 				{
-					src: "/day-1/5.png",
-					caption: "Eco-friendly alternatives in action",
+					src: "/day-1/5.webp",
+					caption:
+						"Morning routines with reusable bottles and no plastic in sight",
 				},
 				{
-					src: "/day-1/6.png",
-					caption: "Eco-friendly alternatives in action",
+					src: "/day-1/6.webp",
+					caption: "Kicking off with sustainable alternatives and a smile",
 				},
 				{
-					src: "/day-1/2.png",
-					caption: "Eco-friendly alternatives in action",
+					src: "/day-1/2.webp",
+					caption: "Stylish, reusable containers replacing single-use plastics",
 				},
 				{
-					src: "/day-1/7.png",
-					caption: "Plastic-free workspace setup",
+					src: "/day-1/7.webp",
+					caption: "Refilling, reusing, and refreshing — the eco-friendly way",
 				},
 				{
-					src: "/day-1/8.png",
-					caption: "Eco-friendly alternatives in action",
+					src: "/day-1/8.webp",
+					caption: "Productivity powered by conscious, waste-free habits",
 				},
 			],
 		},
