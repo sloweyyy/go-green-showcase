@@ -81,6 +81,10 @@ export default function Home() {
 					caption: "Work from nature's embrace",
 				},
 				{
+					src: "/day-1/12.webp",
+					caption: "Taking calls surrounded by nature's inspiration",
+				},
+				{
 					src: "/day-1/2.webp",
 					caption: "Stylish, reusable containers replacing single-use plastics",
 				},
