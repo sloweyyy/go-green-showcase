@@ -106,6 +106,26 @@ export default function Home() {
 					src: "/day-2/3.webp",
 					caption: "Sustainable commute with Metro",
 				},
+				{
+					src: "/day-2/4.webp",
+					caption: "Eco-friendly commute with bycicle",
+				},
+				{
+					src: "/day-2/5.webp",
+					caption: "Eco-friendly commute with bycicle",
+				},
+				{
+					src: "/day-2/6.webp",
+					caption: "Eco-friendly commute with Electric Bike",
+				},
+				{
+					src: "/day-2/7.webp",
+					caption: "Eco-friendly commute with Electric Bike",
+				},
+				{
+					src: "/day-2/8.webp",
+					caption: "Eco-friendly commute with Electric Bike",
+				},
 			],
 		},
 		{
