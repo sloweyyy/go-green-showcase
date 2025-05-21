@@ -96,35 +96,39 @@ export default function Home() {
 			images: [
 				{
 					src: "/day-2/1.webp",
-					caption: "Starting the day with XanhSM",
+					caption: "Morning kickoff with XanhSM's sustainable start",
 				},
 				{
 					src: "/day-2/2.webp",
-					caption: "Eco-friendly commute with XanhSM",
+					caption: "XanhSM's green journey begins",
 				},
 				{
 					src: "/day-2/3.webp",
-					caption: "Sustainable commute with Metro",
+					caption: "Metro's eco-conscious ride through the city",
 				},
 				{
 					src: "/day-2/4.webp",
-					caption: "Eco-friendly commute with bycicle",
+					caption: "Pedaling towards a greener tomorrow",
 				},
 				{
 					src: "/day-2/5.webp",
-					caption: "Eco-friendly commute with bycicle",
+					caption: "Two wheels, zero emissions, pure freedom",
 				},
 				{
 					src: "/day-2/6.webp",
-					caption: "Eco-friendly commute with Electric Bike",
+					caption: "Electric Bike: Powering sustainable mobility",
 				},
 				{
 					src: "/day-2/7.webp",
-					caption: "Eco-friendly commute with Electric Bike",
+					caption: "Silent revolution on electric wheels",
 				},
 				{
 					src: "/day-2/8.webp",
-					caption: "Eco-friendly commute with Electric Bike",
+					caption: "Charging forward with clean energy",
+				},
+				{
+					src: "/day-2/9.webp",
+					caption: "Cycling through nature's embrace",
 				},
 			],
 		},
