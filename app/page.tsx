@@ -95,28 +95,16 @@ export default function Home() {
 			title: "Move with Less",
 			images: [
 				{
-					src: "/placeholder.svg?height=200&width=200",
-					caption: "Team biking to work",
+					src: "/day-2/1.webp",
+					caption: "Starting the day with XanhSM",
 				},
 				{
-					src: "/placeholder.svg?height=200&width=200",
-					caption: "Public transport commuters",
+					src: "/day-2/2.webp",
+					caption: "Eco-friendly commute with XanhSM",
 				},
 				{
-					src: "/placeholder.svg?height=200&width=200",
-					caption: "Walking meeting in progress",
-				},
-				{
-					src: "/placeholder.svg?height=200&width=200",
-					caption: "Carpooling initiative",
-				},
-				{
-					src: "/placeholder.svg?height=200&width=200",
-					caption: "Team biking to work",
-				},
-				{
-					src: "/placeholder.svg?height=200&width=200",
-					caption: "Team biking to work",
+					src: "/day-2/3.webp",
+					caption: "Sustainable commute with Metro",
 				},
 			],
 		},
