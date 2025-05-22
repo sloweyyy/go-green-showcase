@@ -130,6 +130,10 @@ export default function Home() {
 					src: "/day-2/9.webp",
 					caption: "Cycling through nature's embrace",
 				},
+				{
+					src: "/day-2/10.webp",
+					caption: "Eco-friendly skies: Sustainable travel to nature's embrace",
+				},
 			],
 		},
 		{
@@ -154,6 +158,11 @@ export default function Home() {
 				{
 					src: "/day-3/4.webp",
 					caption: "Khang Dang brings lunch from home in a reusable container",
+				},
+				{
+					src: "/day-3/5.webp",
+					caption:
+						"Ms. Linh Nguyen combines work and lunch in nature's embrace",
 				},
 			],
 		},
