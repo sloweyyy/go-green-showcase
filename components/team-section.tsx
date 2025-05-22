@@ -89,7 +89,7 @@ export default function TeamSection() {
 		visible: {
 			opacity: 1,
 			transition: {
-				staggerChildren: 0.05, // Even faster staggering for 7 in a row
+				staggerChildren: 0.05,
 			},
 		},
 	};
@@ -106,12 +106,6 @@ export default function TeamSection() {
 			},
 		},
 	};
-
-	// Group team members into rows of 7
-	const teamRows = [];
-	for (let i = 0; i < teamMembers.length; i += 7) {
-		teamRows.push(teamMembers.slice(i, i + 7));
-	}
 
 	return (
 		<section id="team" className="py-16 bg-green-50/50">
@@ -130,43 +124,40 @@ export default function TeamSection() {
 					</p>
 				</motion.div>
 
-				{teamRows.map((row, rowIndex) => (
-					<motion.div
-						key={rowIndex}
-						className="grid grid-cols-7 gap-3 mb-3"
-						variants={containerVariants}
-						initial="hidden"
-						whileInView="visible"
-						viewport={{ once: true, amount: 0.1 }}
-					>
-						{row.map((member, index) => (
-							<motion.div
-								key={index}
-								className="bg-white rounded-md overflow-hidden border border-gray-100"
-								variants={itemVariants}
-								whileHover={{ y: -3, transition: { duration: 0.2 } }}
-							>
-								<div className="relative h-40 w-full bg-green-100/50">
-									<Image
-										src={member.image}
-										alt={member.name}
-										fill
-										className="object-cover"
-										sizes="(max-width: 768px) 14.28vw, 14.28vw"
-									/>
-								</div>
-								<div className="p-2 text-center">
-									<h3 className="text-sm font-medium text-gray-800 truncate">
-										{member.name}
-									</h3>
-									{member.aka && (
-										<p className="text-xs text-green-600">{member.aka}</p>
-									)}
-								</div>
-							</motion.div>
-						))}
-					</motion.div>
-				))}
+				<motion.div
+					className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-3"
+					variants={containerVariants}
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true, amount: 0.1 }}
+				>
+					{teamMembers.map((member, index) => (
+						<motion.div
+							key={index}
+							className="bg-white rounded-md overflow-hidden border border-gray-100"
+							variants={itemVariants}
+							whileHover={{ y: -3, transition: { duration: 0.2 } }}
+						>
+							<div className="relative h-40 w-full bg-green-100/50">
+								<Image
+									src={member.image}
+									alt={member.name}
+									fill
+									className="object-cover"
+									sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, (max-width: 1280px) 20vw, 14.28vw"
+								/>
+							</div>
+							<div className="p-2 text-center">
+								<h3 className="text-sm font-medium text-gray-800 truncate">
+									{member.name}
+								</h3>
+								{member.aka && (
+									<p className="text-xs text-green-600">{member.aka}</p>
+								)}
+							</div>
+						</motion.div>
+					))}
+				</motion.div>
 			</div>
 		</section>
 	);
