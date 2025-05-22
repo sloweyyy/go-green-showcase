@@ -137,20 +137,19 @@ export default function Home() {
 			title: "Lunch the Reusable Way",
 			images: [
 				{
-					src: "/placeholder.svg?height=200&width=200",
-					caption: "Team lunch with reusable containers",
+					src: "/day-3/1.webp",
+					caption:
+						"Leading by example: Mr. Thanh Nguyen demonstrates sustainable lunch practices",
 				},
 				{
-					src: "/placeholder.svg?height=200&width=200",
-					caption: "Zero-waste meal preparation",
+					src: "/day-3/2.webp",
+					caption:
+						"Thi Thai embraces eco-friendly dining with her reusable container",
 				},
 				{
-					src: "/placeholder.svg?height=200&width=200",
-					caption: "Composting food waste",
-				},
-				{
-					src: "/placeholder.svg?height=200&width=200",
-					caption: "Reusable utensils in use",
+					src: "/day-3/3.webp",
+					caption:
+						"Team members enjoying their lunch in sugarcane pulp containers",
 				},
 			],
 		},
