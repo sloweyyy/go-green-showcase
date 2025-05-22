@@ -90,21 +90,21 @@ export default function ImpactStats() {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 					<Stat
 						icon={<Recycle className="h-6 w-6 text-green-600" />}
-						value={7}
+						value={30}
 						label="Plastic items saved"
 						suffix=""
 						delay={0}
 					/>
 					<Stat
 						icon={<Truck className="h-6 w-6 text-green-600" />}
-						value={10}
+						value={50}
 						label="CO2 kg reduced"
 						suffix="kg"
 						delay={250}
 					/>
 					<Stat
 						icon={<Droplets className="h-6 w-6 text-green-600" />}
-						value={10}
+						value={30}
 						label="Liters of water saved"
 						suffix="L"
 						delay={500}
