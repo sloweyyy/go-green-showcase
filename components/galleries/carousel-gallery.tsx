@@ -45,8 +45,14 @@ export default function CarouselGallery({
 		if (!autoPlay) return;
 
 		const interval = setInterval(() => {
+			// Save current scroll position before changing image
+			const scrollPosition = window.scrollY;
 			setDirection(1);
 			setCurrentIndex((prev) => (prev + 1) % images.length);
+			// Restore scroll position after state update
+			setTimeout(() => {
+				window.scrollTo(0, scrollPosition);
+			}, 10);
 		}, 5000);
 
 		return () => clearInterval(interval);
@@ -55,15 +61,26 @@ export default function CarouselGallery({
 	// Scroll thumbnail into view when current index changes
 	useEffect(() => {
 		if (thumbsContainerRef.current) {
-			const thumbElement = thumbsContainerRef.current.children[
-				currentIndex
-			] as HTMLElement;
+			// Save the main page scroll position
+			const pageScrollPos = window.scrollY;
+
+			const container = thumbsContainerRef.current;
+			const thumbElement = container.children[currentIndex] as HTMLElement;
+
 			if (thumbElement) {
-				thumbElement.scrollIntoView({
+				// Use scrollLeft instead of scrollIntoView to prevent page jumping
+				const scrollLeft =
+					thumbElement.offsetLeft -
+					container.clientWidth / 2 +
+					thumbElement.clientWidth / 2;
+
+				container.scrollTo({
+					left: scrollLeft,
 					behavior: "smooth",
-					block: "nearest",
-					inline: "center",
 				});
+
+				// Ensure page scroll position is maintained
+				window.scrollTo(0, pageScrollPos);
 			}
 		}
 	}, [currentIndex]);
@@ -73,21 +90,33 @@ export default function CarouselGallery({
 	const resumeAutoPlay = () => setAutoPlay(true);
 
 	const handleNext = () => {
+		// Save scroll position
+		const scrollPosition = window.scrollY;
 		setAutoPlay(false);
 		setDirection(1);
 		setCurrentIndex((prev) => (prev + 1) % images.length);
+		// Restore scroll position
+		setTimeout(() => window.scrollTo(0, scrollPosition), 10);
 	};
 
 	const handlePrevious = () => {
+		// Save scroll position
+		const scrollPosition = window.scrollY;
 		setAutoPlay(false);
 		setDirection(-1);
 		setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+		// Restore scroll position
+		setTimeout(() => window.scrollTo(0, scrollPosition), 10);
 	};
 
 	const handleThumbClick = (index: number) => {
+		// Save scroll position
+		const scrollPosition = window.scrollY;
 		setAutoPlay(false);
 		setDirection(index > currentIndex ? 1 : -1);
 		setCurrentIndex(index);
+		// Restore scroll position
+		setTimeout(() => window.scrollTo(0, scrollPosition), 10);
 	};
 
 	const slideVariants = {
@@ -123,9 +152,10 @@ export default function CarouselGallery({
 			</motion.div>
 
 			<div className="flex flex-col w-full max-w-5xl mx-auto gap-4">
-				{/* Main Carousel */}
+				{/* Main Carousel - Fixed height to prevent layout shifts */}
 				<div
 					className="relative aspect-[16/9] w-full rounded-xl overflow-hidden shadow-xl carousel-container"
+					style={{ height: "500px" }} /* Fixed height prevents layout shifts */
 					onMouseEnter={pauseAutoPlay}
 					onMouseLeave={resumeAutoPlay}
 				>
@@ -133,7 +163,7 @@ export default function CarouselGallery({
 						<AnimatePresence initial={false} custom={direction}>
 							<motion.div
 								key={currentIndex}
-								className="absolute inset-0"
+								className="absolute inset-0 will-change-transform"
 								custom={direction}
 								variants={slideVariants}
 								initial="enter"

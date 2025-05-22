@@ -48,3 +48,25 @@
 .carousel-container:hover .carousel-zoom {
   transform: scale(1.05);
 }
+
+/* Performance optimizations to prevent scroll jumping */
+.carousel-container {
+  contain: layout paint size;
+  will-change: transform;
+  height: 500px;
+  transform: translateZ(0);
+  position: relative;
+}
+
+/* Fix for scroll jumping */
+.will-change-transform {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Added stability for carousel */
+.AnimatePresence {
+  position: relative;
+  height: 100%;
+  contain: content;
+}
