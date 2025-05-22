@@ -164,6 +164,10 @@ export default function Home() {
 					caption:
 						"Ms. Linh Nguyen combines work and lunch in nature's embrace",
 				},
+				{
+					src: "/day-3/6.webp",
+					caption: "Team member enjoying his lunch in ceramic bowls",
+				},
 			],
 		},
 	];
