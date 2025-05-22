@@ -151,6 +151,10 @@ export default function Home() {
 					caption:
 						"Team members enjoying their lunch in sugarcane pulp containers",
 				},
+				{
+					src: "/day-3/4.webp",
+					caption: "Khang Dang brings lunch from home in a reusable container",
+				},
 			],
 		},
 	];
