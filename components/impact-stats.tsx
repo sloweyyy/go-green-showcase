@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { Droplets, Leaf, Recycle, Truck } from "lucide-react";
+import { Droplets, Leaf, Recycle, Truck, Zap } from "lucide-react";
 
 interface StatProps {
 	icon: React.ReactNode;
@@ -87,7 +87,7 @@ export default function ImpactStats() {
 					</p>
 				</motion.div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
 					<Stat
 						icon={<Recycle className="h-6 w-6 text-green-600" />}
 						value={30}
@@ -108,6 +108,13 @@ export default function ImpactStats() {
 						label="Liters of water saved"
 						suffix="L"
 						delay={500}
+					/>
+					<Stat
+						icon={<Zap className="h-6 w-6 text-green-600" />}
+						value={30}
+						label="Old batteries recycled"
+						suffix=""
+						delay={650}
 					/>
 					<Stat
 						icon={<Leaf className="h-6 w-6 text-green-600" />}

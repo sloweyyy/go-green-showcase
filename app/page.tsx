@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import dynamic from "next/dynamic";
 
 import { Header } from "@/components/header";
 import StandardGrid from "@/components/galleries/standard-grid";
@@ -11,9 +12,14 @@ import MasonryLayout from "@/components/galleries/masonry-layout";
 import CarouselGallery from "@/components/galleries/carousel-gallery";
 import TeamSection from "@/components/team-section";
 import JoinChallenge from "@/components/join-challenge";
-import ImpactStats from "@/components/impact-stats";
+const ImpactStats = dynamic(() => import("@/components/impact-stats"), {
+	ssr: false,
+});
 import Testimonials from "@/components/testimonials";
 import HeroBackgroundEffect from "@/components/hero-background";
+import CollageGallery from "@/components/galleries/collage-gallery";
+import TimelineGallery from "@/components/galleries/timeline-gallery";
+import PolaroidGallery from "@/components/galleries/polaroid-gallery";
 
 export default function Home() {
 	const heroRef = useRef(null);
@@ -34,6 +40,32 @@ export default function Home() {
 	};
 
 	const challengeDays = [
+		{
+			day: "Week 2",
+			title: "Recycle Roundup",
+			images: [
+				{
+					src: "/week-2/1.webp",
+					caption: "Kicking off Week 2 with a big recycling effort!",
+				},
+				{
+					src: "/week-2/2.webp",
+					caption: "Sorting recyclables: teamwork in action.",
+				},
+				{
+					src: "/week-2/3.webp",
+					caption: "Everyone pitching in for a cleaner environment.",
+				},
+				{
+					src: "/week-2/4.webp",
+					caption: "Old batteries ready for recycling.",
+				},
+				{
+					src: "/week-2/5.webp",
+					caption: "Celebrating our recycling success together!",
+				},
+			],
+		},
 		{
 			day: "Day 1",
 			title: "Less Plastic",
@@ -248,25 +280,46 @@ export default function Home() {
 					</motion.h2>
 
 					<div className="space-y-24">
-						{/* Day 1: Standard Grid with hover zoom effect */}
-						<StandardGrid
+						{/* Split for Week 2 */}
+						<div className="flex items-center my-16">
+							<div className="flex-grow border-t border-gray-300"></div>
+							<span className="mx-6 text-xl font-semibold text-green-700 bg-white px-4 py-2 rounded shadow-sm">
+								Week 2: Recycle Roundup
+							</span>
+							<div className="flex-grow border-t border-gray-300"></div>
+						</div>
+
+						{/* Week 2: Polaroid gallery for Recycle Roundup */}
+						<PolaroidGallery
 							day={challengeDays[0].day}
 							title={challengeDays[0].title}
 							images={challengeDays[0].images}
 						/>
 
-						{/* Day 2: Interactive masonry layout with staggered animations */}
-						<MasonryLayout
+						{/* Split for Week 1 */}
+						<div className="flex items-center my-16">
+							<div className="flex-grow border-t border-gray-300"></div>
+							<span className="mx-6 text-xl font-semibold text-green-700 bg-white px-4 py-2 rounded shadow-sm">
+								Week 1: Live Green, Build Habits
+							</span>
+							<div className="flex-grow border-t border-gray-300"></div>
+						</div>
+
+						{/* Week 1: Day 1, Day 2, Day 3 galleries */}
+						<StandardGrid
 							day={challengeDays[1].day}
 							title={challengeDays[1].title}
 							images={challengeDays[1].images}
 						/>
-
-						{/* Day 3: Carousel/slider gallery with pagination */}
-						<CarouselGallery
+						<MasonryLayout
 							day={challengeDays[2].day}
 							title={challengeDays[2].title}
 							images={challengeDays[2].images}
+						/>
+						<CarouselGallery
+							day={challengeDays[3].day}
+							title={challengeDays[3].title}
+							images={challengeDays[3].images}
 						/>
 					</div>
 				</div>
