@@ -46,23 +46,28 @@ export default function Home() {
 			images: [
 				{
 					src: "/week-2/1.webp",
-					caption: "Kicking off Week 2 with a big recycling effort!",
+					caption:
+						"The team gathers to kick off Week 2 with a group recycling effort and lots of enthusiasm!",
 				},
 				{
 					src: "/week-2/2.webp",
-					caption: "Sorting recyclables: teamwork in action.",
+					caption:
+						"Sorting through bags of used batteries—showing real teamwork as we separate recyclables.",
 				},
 				{
 					src: "/week-2/3.webp",
-					caption: "Everyone pitching in for a cleaner environment.",
+					caption:
+						"Everyone pitching in to organize batteries for recycling and help create a cleaner environment.",
 				},
 				{
 					src: "/week-2/4.webp",
-					caption: "Old batteries ready for recycling.",
+					caption:
+						"Handing over old batteries for recycling, working together to make a difference.",
 				},
 				{
 					src: "/week-2/5.webp",
-					caption: "Celebrating our recycling success together!",
+					caption:
+						"Celebrating our successful recycling initiative as a team—great job, everyone!",
 				},
 			],
 		},
