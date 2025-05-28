@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,16 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className="scroll-smooth">
+			<head>
+				<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+				{/* Katalon Traffic Agent */}
+				<Script
+					defer
+					async
+					src="https://static.katalon.com/libs/traffic-agent/v1/traffic-agent.min.js"
+					data-client-code="KA-1959366-3"
+				/>
+			</head>
 			<body className={inter.className}>
 				{/* Google Tag Manager - Load as early as possible */}
 				<Script
